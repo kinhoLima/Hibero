@@ -1,0 +1,10 @@
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.Form1.resources
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.Properties.Resources.resources
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\bin\Debug\HiberoExtintores.exe
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\bin\Debug\HiberoExtintores.pdb
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.exe
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.pdb
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.frmExtintor.resources
