@@ -1,0 +1,12 @@
+C:\Workspace C#\Exercicios\Exercicios\bin\Debug\Exercicios.exe
+C:\Workspace C#\Exercicios\Exercicios\bin\Debug\Exercicios.pdb
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.Properties.Resources.resources
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.exe
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.pdb
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.Conta.CalculadoraSimples1.frmCalculadora.resources
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.frmConta.resources
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.frmCalc.resources
+C:\Workspace C#\Exercicios\Exercicios\obj\x86\Debug\Exercicios.frmExercicios.resources
