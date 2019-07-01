@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using Oracle.DataAccess.Client;
 
 namespace HiberoExtintores
 {
@@ -30,6 +31,16 @@ namespace HiberoExtintores
             strQuery = "Select * From cargaNominal";
             cldBancoDeDados objBancoDados = new cldBancoDeDados();
             return objBancoDados.RetornaDataSet(strQuery);
+
+        }
+
+
+        public OracleDataReader ListarCargaNominal(string cod)
+        {
+            string strQuery;
+            strQuery = "Select descricao From cargaNominal where codcarganominal='" +cod+ "'";
+            cldBancoDeDados objBancoDados = new cldBancoDeDados();
+            return objBancoDados.RetornaDataReader(strQuery);
 
         }
     }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using Oracle.DataAccess.Client;
 
 namespace HiberoExtintores
 {
@@ -31,7 +32,16 @@ namespace HiberoExtintores
             strQuery = "Select * From Norma";
             cldBancoDeDados objBancoDados = new cldBancoDeDados();
             return objBancoDados.RetornaDataSet(strQuery);
-
         }
+
+        public OracleDataReader ListarNorma(int cod)
+        {
+            string strQuery;
+            strQuery = "Select * From Norma where codnorma='"+cod+"'";
+            cldBancoDeDados objBancoDados = new cldBancoDeDados();
+            return objBancoDados.RetornaDataReader(strQuery);
+        }
+
+
     }
 }

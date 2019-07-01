@@ -1,0 +1,250 @@
+create table Extintor
+(
+codExt int,
+numExt int,
+anoFab int,
+anoTeste int,
+codMarca int,
+codNorma int,
+codProjeto int,
+nivel int,
+pintura int,
+
+constraint pk_ext primary key (codExt),
+constraint fk_marca foreign key (codMarca) references Marca (codMarca),
+constraint fk_norma foreign key (codNorma) references Norma (codNorma),
+constraint fk_projeto foreign key (codProjeto) references Projeto (codProjeto)
+);
+alter table Extintor add codTipo int;
+alter table Extintor add codCargaNominal int;
+alter table Extintor add numSelo int;
+
+alter table Extintor add constraint fk_Tipo foreign key (codTipo) references Tipo (codTipo);
+alter table Extintor add constraint fk_CargaNominal foreign key (codCargaNominal) references CargaNominal (codCargaNominal);
+
+create sequence seqExtintor
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+create table Marca
+(
+codMarca int,
+descricao varchar2(50),
+constraint pk_marca primary key (codMarca)
+);
+alter table Marca add ano int,
+--alter table Marca  modify rename ano to anoInicio,
+alter  table Marca add anoFim int,
+alter table Marca add codNorma int,
+alter table Marca add constraint fk_codNormaMarca foreign key (codNorma) references Norma (codNorma), 
+
+insert into Marca values (1,'BSC')
+insert into Marca values (2,'RR')
+
+
+create sequence seqMarca
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+create table Norma 
+(
+codNorma int,
+descricao varchar2(50),
+constraint pk_Norma primary key (codNorma)
+);
+alter table Norma add pressaoTeste varchar2(50),
+insert into Norma values(1, 10721)
+insert into Norma values(2, 11715)
+
+
+
+create sequence seqNorma
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+create table Projeto
+(
+codProjeto int,
+descricao varchar2(50),
+constraint pk_projeto primary key (codProjeto)
+);
+alter table Projeto add codNorma int,
+alter table Projeto add codMarca int,
+alter table Projeto add codTipo int,
+alter table Projeto add codCargaNominal int,
+
+alter table Projeto add constraint fk_normaProjeto foreign key(codNorma) references Norma (codNorma);
+alter table Projeto add constraint fk_marcaProjeto foreign key(codMarca) references Marca (codMarca);
+alter table Projeto add constraint fk_tipoProjeto foreign key(codTipo) references Tipo (codTipo);
+alter table Projeto add constraint fk_cargaNominalProjeto foreign key(codCargaNominal) references CargaNominal (codCargaNominal);
+
+
+insert into Projeto values(1,'4315/4')
+insert into Projeto values (2, 'ec144')
+
+
+
+create sequence seqProjeto
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+create table Tipo
+(
+codTipo int,
+descricao varchar2(50),
+constraint pk_Tipo primary key (codTipo)
+);
+insert into Tipo values(1,'AP')
+
+insert into Tipo values(2,'PQS')
+
+
+
+create sequence seqTipo
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+
+create table CargaNominal
+(
+codCargaNominal int,
+descricao varchar2(50),
+constraint pk_CargaNominal primary key (codCargaNominal)
+);
+insert into CargaNominal values (1,'4KG')
+insert into CargaNominal values (2,'10L')
+
+
+
+create sequence seqCarga
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+
+create table Servico
+(
+codServico int,
+codExt int, 
+numSelo int,
+numCliente varchar(50),
+nivel int,
+pintura varchar(5),
+ensPneumIndPres varchar(5),
+ensPneumValv varchar(5),
+regulValvAlivio varchar(5),
+pecasSubst varchar(5),
+visualExterno varchar(5),
+visualInterno varchar(5),
+roscas varchar(5),
+ensHidroValv varchar(5),
+ensHidroMang varchar(5),
+Tara int,
+PesoVazio int,
+PerdaMassa int,
+PesoCheio int,
+VolumeEmL int,
+capacMaxCarga int,
+pressaoTrab int,
+pressaoTeste int,
+InstantaneaET int,
+PermanenteEP int,
+EPET int,
+aprovado varchar(5),
+condenado varchar(5),
+motivoCond varchar(50),
+inspFinal varchar(10),
+
+constraint pk_servico primary key (codServico)
+);
+
+
+
+create sequence seqServico
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+create table Peca
+(
+codPeca int,
+descricao varchar(100),
+qtde int,
+qtdeMin int,
+constraint pk_peca primary key (codPeca)
+);
+
+
+
+create sequence seqPeca
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+
+create table historicoTrocaPeca
+(
+codHistTroca int,
+codPeca int,
+codServico int,
+dataTroca varchar(15),
+constraint pk_histTroca 
+primary key (codHistTroca),
+
+constraint fk_pecaHist 
+foreign key (codPeca)
+references Peca (codPeca),
+
+constraint fk_servicoHist 
+foreign key (codServico)
+references Servico (codServico)
+
+);
+
+
+
+create sequence seqHistPeca
+start with 1
+increment by 1
+nocycle 
+nocache
+nomaxvalue;
+
+
+
+commit

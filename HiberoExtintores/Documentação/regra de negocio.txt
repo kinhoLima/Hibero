@@ -1,0 +1,24 @@
+Hibero Extintores
+
+Um cliente possui muitos extintores.
+Um cliente pode ser uma empresa.
+
+Um extintor possui, numero unico, ano de fabricação, ano de teste, marca, norma, projeto, pressão de trabalho.
+
+Um extintor pode ter varios serviços realizados.
+Um extintor pode ter varias peças substituídas.
+
+Um serviço possui, selo antigo, selo novo, nivel da manutenção,
+se é pintura, numero do cliente
+
+A manutenção de nivel 2 faz, ensaio pneumatico do indicador de pressão,
+ensaio pneumatico da valvula, regulagem da valvula de alivio, visual interno, visual externo, roscas, ensaio hidrostatico da mangueira,
+ensaio hidrostatico da valvula.
+
+A manutenção de nivel 3 faz tudo que a manutenção nivel 2 faz e tambem,
+tara, peso vazio, perda de massa, peso cheio(de água), capacidade máxima de carga(acima de 6kg para CO² 6kg), pressão de trabalho, pressão de teste, pressão instantanea ET, pressão permanente EP, resultado (EP/ET)%.
+
+
+Uma Ordem de Serviço pode ter varios serviços.
+Uma peça possui cod, descrição, quantidade em estoque, quantidade minima para reposição.
+

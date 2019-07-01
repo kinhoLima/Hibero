@@ -8,3 +8,4 @@ C:\Workspace C#\HiberoExtintores\HiberoExtintores\bin\Debug\HiberoExtintores.pdb
 C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.exe
 C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.pdb
 C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.frmExtintor.resources
+C:\Workspace C#\HiberoExtintores\HiberoExtintores\obj\x86\Debug\HiberoExtintores.frmPrincipal.resources

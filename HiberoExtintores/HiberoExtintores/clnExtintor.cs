@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Oracle.DataAccess.Client;
 
 namespace HiberoExtintores
 {
@@ -103,9 +104,15 @@ namespace HiberoExtintores
             set { _numSelo = value; }
         }
 
+        public OracleDataReader ListarExtintor(string numExtintor)
+        {
+            string strQuery;
+            strQuery = "Select * From Extintor where numExt='" + numExtintor + "' ";
+            cldBancoDeDados objBancoDados = new cldBancoDeDados();
+            return objBancoDados.RetornaDataReader(strQuery);
+        }
 
-
-        public void Gravar()
+        public void SalvarExtintor()
         {
 
             string strQuery;
@@ -113,7 +120,7 @@ namespace HiberoExtintores
             strQuery += (" Values ");
             strQuery += ("(");
 
-            strQuery += ("'" + _cod + "'");
+            strQuery += ("seqExtintor.nextval ");
             strQuery += (",'" + _numExt + "'");
             strQuery += (",'" + _anoFab + "'");
             strQuery += (",'" + _anoTeste + "'");
@@ -128,10 +135,12 @@ namespace HiberoExtintores
            
             strQuery += (")");
 
-
+            
 
             cldBancoDeDados objcldBancoDados = new cldBancoDeDados();
-            objcldBancoDados.ExecutaComando(strQuery);
+            objcldBancoDados.ExecutaScalar(strQuery);
+            
+          //  objcldBancoDados.ExecutaComando(strQuery);
         }
     }
 }

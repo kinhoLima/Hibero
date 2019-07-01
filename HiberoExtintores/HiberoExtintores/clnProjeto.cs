@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
+using Oracle.DataAccess.Client;
 
 namespace HiberoExtintores
 {
@@ -32,5 +33,18 @@ namespace HiberoExtintores
             return objBancoDados.RetornaDataSet(strQuery);
 
         }
+
+        public OracleDataReader ListarProjeto(int norma, int marca, int tipo, int carga)
+        {
+            string strQuery;
+            strQuery = "Select * From Projeto where codnorma='" + norma + "' and ";
+           strQuery += " codmarca ='" + marca + "' and";
+          strQuery +="  codtipo ='" + tipo + "' and";
+            strQuery += "  codcarganominal ='" + carga + "' ";
+            cldBancoDeDados objBancoDados = new cldBancoDeDados();
+            return objBancoDados.RetornaDataReader(strQuery);
+
+        }
+        
     }
 }

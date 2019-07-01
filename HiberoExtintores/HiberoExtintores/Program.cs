@@ -15,7 +15,7 @@ namespace HiberoExtintores
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmExtintor());
+            Application.Run(new frmPrincipal());
         }
     }
 }
